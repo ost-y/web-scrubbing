@@ -16,12 +16,9 @@ for article in article_list:
     link = 'https://habr.com' + div_with_link.select_one('a')['href']
     time = article.select_one('time')['title']
     text = article.select_one('div.article-formatted-body.article-formatted-body_version-2')
-    print(text)
-#
-#
-    # for word in KEYWORDS:
-    #     if word in title or text:
-    #         print({f'<{time}> – <{title}> – <{link}>'})
+    for word in KEYWORDS:
+        if word in title or text:
+            print({f'<{time}> – <{title}> – <{link}>'})
 
 
 
